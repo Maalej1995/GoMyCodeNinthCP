@@ -1,9 +1,10 @@
 import React from 'react'
+import {Container} from 'react-bootstrap'
 
-export default function MovieContainer() {
+export default function MovieContainer({children}) {
     return (
-        <div>
-            
-        </div>
+        <Container style={{marginTop: 50}}>
+            {children}
+        </Container>
     )
 }

@@ -1,9 +1,12 @@
 import React from 'react'
+import MovieCard from './MovieCard'
 
-export default function MovieList() {
+export default function Movies({allMovies}) {
     return (
-        <div>
-            
+        <div style={{display: 'flex'}}>
+            {
+                allMovies.map(movie => <MovieCard key={movie.id} details={movie} />)
+            }
         </div>
     )
 }
