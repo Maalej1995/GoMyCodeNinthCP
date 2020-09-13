@@ -63,48 +63,51 @@ function App() {
   }
 
   return (
-    <MovieContainer>
-      <Button style={{ marginBottom: 50 }} onClick={() => setModalIsShown(true)}>Add</Button>
-      <Filter onValuesChange={(str, stars) => handleValuesChange(str, stars)} />
-      <MovieList allMovies={filteredMovies} />
-      <Modal show={modalIsShown} onHide={() => setModalIsShown(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Film</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group>
-              <Form.Label>Film Title</Form.Label>
-              <Form.Control name="title" onChange={(e) => handleFormChange(e)} value={filmFormValues.title} type="text" placeholder="Enter film title" />
-            </Form.Group>
+    <div className="App">
+      <header className="App-header">
+        <MovieContainer>
+          <Button style={{ position: 'fixed', top: '30px', right: '30px' }} onClick={() => setModalIsShown(true)}>Add Film</Button>
+          <Filter onValuesChange={(str, stars) => handleValuesChange(str, stars)} />
+          <MovieList allMovies={filteredMovies} />
+          <Modal show={modalIsShown} onHide={() => setModalIsShown(false)}>
+            <Modal.Header closeButton>
+              <Modal.Title>Film</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Form>
+                <Form.Group>
+                  <Form.Label>Film Title</Form.Label>
+                  <Form.Control name="title" onChange={(e) => handleFormChange(e)} value={filmFormValues.title} type="text" placeholder="Enter film title" />
+                </Form.Group>
 
-            <Form.Group>
-              <Form.Label>Year</Form.Label>
-              <Form.Control name="year" onChange={(e) => handleFormChange(e)} value={filmFormValues.year} type="number" placeholder="Film Year" />
-            </Form.Group>
+                <Form.Group>
+                  <Form.Label>Year</Form.Label>
+                  <Form.Control name="year" onChange={(e) => handleFormChange(e)} value={filmFormValues.year} type="number" placeholder="Film Year" />
+                </Form.Group>
 
-            <Form.Group>
-              <Form.Label>Film Image</Form.Label>
-              <Form.Control name="image" onChange={(e) => handleFormChange(e)} value={filmFormValues.image} type="text" placeholder="Film Image" />
-            </Form.Group>
+                <Form.Group>
+                  <Form.Label>Film Image</Form.Label>
+                  <Form.Control name="image" onChange={(e) => handleFormChange(e)} value={filmFormValues.image} type="text" placeholder="Film Image" />
+                </Form.Group>
 
-            <Form.Group>
-              <Form.Label>Rating</Form.Label>
-              <Form.Control name="rating" onChange={(e) => handleFormChange(e)} value={filmFormValues.rating} type="number" placeholder="Film Rating" />
-            </Form.Group>
+                <Form.Group>
+                  <Form.Label>Rating</Form.Label>
+                  <Form.Control name="rating" onChange={(e) => handleFormChange(e)} value={filmFormValues.rating} type="number" placeholder="Film Rating" />
+                </Form.Group>
 
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={() => setModalIsShown(false)}>
-            Close
+              </Form>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={() => setModalIsShown(false)}>
+                Close
             </Button>
-          <Button variant="primary" onClick={() => saveFilm()}>
-            Save Changes
+              <Button variant="primary" onClick={() => saveFilm()}>
+                Save Changes
             </Button>
-        </Modal.Footer>
-      </Modal>
-    </MovieContainer>
+            </Modal.Footer>
+          </Modal>
+        </MovieContainer>
+      </header></div>
   );
 }
 

@@ -5,7 +5,7 @@ import Rating from 'react-rating'
 
 export default function MovieCard({ details }) {
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem', color: 'grey', fontSize: '1vw', margin:'2%' }}>
             <Card.Img variant="top" src={details.image} height={200} />
             <Card.Body>
                 <Card.Title> {details.title} </Card.Title>
