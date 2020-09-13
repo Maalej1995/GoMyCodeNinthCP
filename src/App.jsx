@@ -77,22 +77,22 @@ function App() {
               <Form>
                 <Form.Group>
                   <Form.Label>Film Title</Form.Label>
-                  <Form.Control name="title" onChange={(e) => handleFormChange(e)} value={filmFormValues.title} type="text" placeholder="Enter film title" />
+                  <Form.Control name="title" onChange={(e) => handleFormChange(e)} value={filmFormValues.title} type="text" placeholder="Title of the film" />
                 </Form.Group>
 
                 <Form.Group>
-                  <Form.Label>Year</Form.Label>
-                  <Form.Control name="year" onChange={(e) => handleFormChange(e)} value={filmFormValues.year} type="number" placeholder="Film Year" />
+                  <Form.Label>Film Year</Form.Label>
+                  <Form.Control name="year" onChange={(e) => handleFormChange(e)} value={filmFormValues.year} type="number" placeholder="Year of the film" />
                 </Form.Group>
 
                 <Form.Group>
                   <Form.Label>Film Image</Form.Label>
-                  <Form.Control name="image" onChange={(e) => handleFormChange(e)} value={filmFormValues.image} type="text" placeholder="Film Image" />
+                  <Form.Control name="image" onChange={(e) => handleFormChange(e)} value={filmFormValues.image} type="text" placeholder="Link to film image" />
                 </Form.Group>
 
                 <Form.Group>
-                  <Form.Label>Rating</Form.Label>
-                  <Form.Control name="rating" onChange={(e) => handleFormChange(e)} value={filmFormValues.rating} type="number" placeholder="Film Rating" />
+                  <Form.Label>Film Rating</Form.Label>
+                  <Form.Control name="rating" onChange={(e) => handleFormChange(e)} value={filmFormValues.rating} type="number" placeholder="Rating of the film" />
                 </Form.Group>
 
               </Form>
